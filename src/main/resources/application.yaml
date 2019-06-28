@@ -2,7 +2,7 @@
 swagger.enabled: true
 
 server:
-  port: 8090
+  port: 9000
   use-forward-headers: true
   undertow:
     io-threads: 2
