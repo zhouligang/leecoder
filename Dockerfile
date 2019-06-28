@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-VOLUME /leecoder
+VOLUME /.halo
 
 ARG JAR_FILE=./target/halo.jar
 ARG PORT=9000
@@ -12,5 +12,5 @@ ENV TZ=${TIME_ZONE}
 
 EXPOSE ${PORT}
 
-ENTRYPOINT ["java", "-Xmx512m", "-jar", "/leecoder/halo.jar"]
+ENTRYPOINT ["java", "-Xmx512m", "-jar", "halo.jar"]
 
