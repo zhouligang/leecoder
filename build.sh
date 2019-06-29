@@ -8,6 +8,6 @@
 #docker build -f Dockerfile .
 #docker build --build-arg JAR_FILE="./target/halo.jar" -t $DOCKER_USERNAME/halo .
 docker build -t leecoder .
-docker run -d -p 9000:9000 leecoder
+docker run --rm -it -d --name leecoder -p 9000:9000  -v ~/.leecoder:/root/.leecoder leecoder
 #docker tag $DOCKER_USERNAME/halo $DOCKER_USERNAME/halo:latest
 #docker push $DOCKER_USERNAME/halo:latest
