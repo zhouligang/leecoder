@@ -1,6 +1,6 @@
 FROM openjdk:8-jre-alpine
 
-VOLUME /.halo
+VOLUME /data/.halo
 
 ARG JAR_FILE=./target/halo.jar
 ARG PORT=9000
