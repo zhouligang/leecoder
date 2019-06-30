@@ -24,9 +24,9 @@ fi
 echo "--------删除镜像成功-------------------------------------"
 
 #推送镜像到官方仓库
-docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+#docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 #docker build -f Dockerfile .
 #docker build --build-arg JAR_FILE="./target/halo.jar" -t $DOCKER_USERNAME/halo .
 docker tag leecoder "$DOCKER_USERNAME/leecoder:latest"
 docker push "$DOCKER_USERNAME/leecoder:latest"
-echo "--------推送镜像成功-------------------------------------"
+echo "--------推送镜像成功 $DOCKER_USERNAME-------------------------------------"
