@@ -1,4 +1,5 @@
-FROM openjdk:8-jre-alpine
+#FROM openjdk:8-jre-alpine
+FROM maven:3.5-jdk-8-onbuild
 
 VOLUME /data/.halo
 
@@ -12,5 +13,5 @@ ENV TZ=${TIME_ZONE}
 
 EXPOSE ${PORT}
 
-ENTRYPOINT ["java", "-Xmx512m", "-jar", "halo.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom", "-Xmx512m", "-jar", "halo.jar"]
 
