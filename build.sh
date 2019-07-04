@@ -28,6 +28,6 @@ echo "--------删除镜像成功-------------------------------------"
 #docker build -f Dockerfile .
 #docker build --build-arg JAR_FILE="./target/halo.jar" -t $DOCKER_USERNAME/halo .
 #推送只需打开下面的注释
-#docker tag leecoder leecoder/leecoder:latest
-#docker push leecoder/leecoder:latest
+docker tag leecoder leecoder:latest
+docker push leecoder:latest
 echo "--------推送镜像成功-------------------------------------"
