@@ -14,6 +14,11 @@ fi
 docker run --rm -it -d --name $CONTAINER_NAME -p 9000:9000  -v ~/.leecoder:/root/.leecoder $CONTAINER_NAME
 echo "--------启动成功----------------------------------------"
 
+#推送镜像到官方仓库,推送只需打开下面的注释
+#docker tag leecoder leecoder/leecoder:latest
+#docker push leecoder/leecoder:latest
+#echo "--------推送镜像成功-------------------------------------"
+
 # 删除指定名称的镜像
 #docker images|grep "$CONTAINER_NAME"|awk '{print $3}'|xargs docker rmi
 # 删除没有版本号的镜像
@@ -22,12 +27,3 @@ if [ "$nonecid" != "" ]; then
     docker rmi -f $nonecid
 fi
 echo "--------删除镜像成功-------------------------------------"
-
-#推送镜像到官方仓库
-#docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
-#docker build -f Dockerfile .
-#docker build --build-arg JAR_FILE="./target/halo.jar" -t $DOCKER_USERNAME/halo .
-#推送只需打开下面的注释
-docker tag leecoder leecoder/leecoder:latest
-docker push leecoder/leecoder:latest
-echo "--------推送镜像成功-------------------------------------"
