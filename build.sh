@@ -24,7 +24,7 @@ fi
 echo "--------删除镜像成功-------------------------------------"
 
 #推送镜像到官方仓库
-winpty docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+#docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
 #docker build -f Dockerfile .
 #docker build --build-arg JAR_FILE="./target/halo.jar" -t $DOCKER_USERNAME/halo .
 #推送只需打开下面的注释
