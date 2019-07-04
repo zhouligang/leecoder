@@ -1,7 +1,7 @@
 FROM openjdk:8-jre-alpine
 #FROM maven:3.5-jdk-8-onbuild
 
-VOLUME /data/.halo
+VOLUME /target
 
 ARG JAR_FILE=./target/halo.jar
 ARG PORT=9000
