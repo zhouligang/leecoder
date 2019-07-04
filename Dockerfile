@@ -1,5 +1,5 @@
-FROM openjdk:8-jre-alpine
-#FROM maven:3.5-jdk-8-onbuild
+#FROM openjdk:8-jre-alpine
+FROM maven:3.5-jdk-8-onbuild
 
 VOLUME ./target
 
