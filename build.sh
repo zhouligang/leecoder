@@ -11,7 +11,7 @@ if [ "$cid" != "" ]; then
 #   docker stop $cid
    docker rm -f $cid
 fi
-docker run --rm -it -d --name $CONTAINER_NAME -p 9000:9000  -v ~/.leecoder:/root/.leecoder $CONTAINER_NAME
+docker run --rm -it -d --name $CONTAINER_NAME -p 9000:9000  -v ~/.halo:/root/.halo $CONTAINER_NAME
 echo "--------启动成功----------------------------------------"
 
 #推送镜像到官方仓库,推送只需打开下面的注释
