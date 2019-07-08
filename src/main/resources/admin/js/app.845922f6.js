@@ -671,10 +671,8 @@
                 listAll: function (e) {
                     return Object(a["a"])({
                         url: "".concat(o, "/map_view"),
-                        params: {
-                            key: e
-                        },
-                        method: "get"
+                        method: "post",
+                        data: e
                     })
                 },
                 save: function (e) {
