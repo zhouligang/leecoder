@@ -37,7 +37,7 @@ public class OptionController {
         optionService.save(optionParams);
     }
 
-    @GetMapping("map_view")
+    @PostMapping("map_view")
     @ApiOperation("Lists all options with map view")
     public Map<String, Object> listAllWithMapView(@RequestBody List<String> keys) {
         if (CollectionUtils.isEmpty(keys)) {
