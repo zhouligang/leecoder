@@ -15,9 +15,9 @@ docker run --rm -it -d --name $CONTAINER_NAME -p 9000:9000  -v ~/.halo:/root/hal
 echo "--------启动成功----------------------------------------"
 
 #推送镜像到官方仓库,推送只需打开下面的注释
-docker tag leecoder leecoder/leecoder:latest
-docker push leecoder/leecoder:latest
-echo "--------推送镜像成功-------------------------------------"
+#docker tag leecoder leecoder/leecoder:latest
+#docker push leecoder/leecoder:latest
+#echo "--------推送镜像成功-------------------------------------"
 
 # 删除指定名称的镜像
 #docker images|grep "$CONTAINER_NAME"|awk '{print $3}'|xargs docker rmi
